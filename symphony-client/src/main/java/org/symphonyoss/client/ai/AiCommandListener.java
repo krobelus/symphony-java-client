@@ -198,12 +198,10 @@ public class AiCommandListener implements ChatListener {
                 lastResponse.put(message.getId(), new AiLastCommand(mlMessageParser, command));
                 return;
 
-            } else if (command.isCommand(chunks)) {
-
-
+            }
+            if (command.isCommand(chunks)) {
                 aiResponder.sendNoPermission(message);
                 return;
-
             }
 
         }
@@ -247,10 +245,9 @@ public class AiCommandListener implements ChatListener {
 
                 return true;
 
-            } else if (command.isCommand(chunks)) {
-
+            }
+            if (command.isCommand(chunks)) {
                 return false;
-
             }
 
         }

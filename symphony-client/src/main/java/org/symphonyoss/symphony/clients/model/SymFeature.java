@@ -98,12 +98,13 @@ public class SymFeature {
     public boolean equals(Object o) {
         if (this == o) {
             return true;
-        } else if (o != null && this.getClass() == o.getClass()) {
-            SymFeature symFeature = (SymFeature)o;
-            return Objects.equals(this.entitlement, symFeature.entitlement) && Objects.equals(this.enabled, symFeature.enabled);
-        } else {
-            return false;
         }
+        if (o != null && this.getClass() == o.getClass()) {
+            SymFeature symFeature = (SymFeature) o;
+            return Objects.equals(this.entitlement, symFeature.entitlement)
+                    && Objects.equals(this.enabled, symFeature.enabled);
+        }
+        return false;
     }
 
     public int hashCode() {

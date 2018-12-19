@@ -23,8 +23,7 @@ public class ClientCheck implements ClientCheckMBean {
     public Boolean isUp() throws SystemException {
         if (fetchFullDetail().isUp()) {
             return true;
-        } else {
-            throw new SystemException("Symphony java client is down!\n"+fetchFullDetail().toString());
         }
+        throw new SystemException("Symphony java client is down!\n" + fetchFullDetail().toString());
     }
 }

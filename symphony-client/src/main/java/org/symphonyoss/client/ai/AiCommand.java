@@ -222,9 +222,8 @@ public class AiCommand {
 
         if (prefixRequirements.length > argumentIndex) {
             return prefixRequirements[argumentIndex];
-        } else {
-            return null;
         }
+        return null;
 
     }
 
@@ -256,9 +255,8 @@ public class AiCommand {
 
         if (arguments.length < argumentIndex) {
             return arguments[argumentIndex];
-        } else {
-            return null;
         }
+        return null;
 
     }
 

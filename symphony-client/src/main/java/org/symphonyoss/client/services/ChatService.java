@@ -401,11 +401,9 @@ public class ChatService implements ChatListener {
         //Note: in future release we can add an option to allow multi-party with users who are verified.
         if (chat.getRemoteUsers().size() != verifiedSymUsers.size()) {
             return false;
-        } else {
-
-            chat.setRemoteUsers(verifiedSymUsers);
-            return true;
         }
+        chat.setRemoteUsers(verifiedSymUsers);
+        return true;
 
 
     }

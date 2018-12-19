@@ -149,9 +149,8 @@ public class DefaultUserCache implements SymUserCache {
 
                 return user;
 
-            } else
-
-                throw new RuntimeException("cannot find Symphony user by ID " + key);
+            }
+            throw new RuntimeException("cannot find Symphony user by ID " + key);
 
         }
 
@@ -185,9 +184,8 @@ public class DefaultUserCache implements SymUserCache {
 
                 return user;
 
-            } else
-
-                throw new RuntimeException("cannot find Symphony user by name " + key);
+            }
+            throw new RuntimeException("cannot find Symphony user by name " + key);
 
         }
 
@@ -212,10 +210,8 @@ public class DefaultUserCache implements SymUserCache {
                 symUserByStream.put(key, symUsers);
                 return symUsers;
 
-            } else {
-
-                throw new RuntimeException("cannot find Symphony users by stream " + key);
             }
+            throw new RuntimeException("cannot find Symphony users by stream " + key);
 
 
         }
